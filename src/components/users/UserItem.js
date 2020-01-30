@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 
 class UserItem extends Component {
-    constructor() {
-        super()
-        this.state = {
-            id: 'id',
-            login: 'mojombo',
-            avatar_url: 'https://avatars0.githubusercontent.com/u/1?v=4',
-            html_url: 'https://github.com/mojombo',
-        }
-    }
+    /*constructor() {
+    super();
+    this.state = {
+      id: "id",
+      login: "mojombo",
+      avatar_url: "https://avatars0.githubusercontent.com/u/1?v=4",
+      html_url: "https://github.com/mojombo"
+    };
+  }*/
 
-    /*Without ctor, then like below
-state = {
+    /*When User cmp is there, no need of internal state
+  state = {
     id: "id",
     login: "mojombo",
     avatar_url: "https://avatars0.githubusercontent.com/u/1?v=4",
@@ -20,7 +20,8 @@ state = {
   };*/
 
     render() {
-        const { login, avatar_url, html_url } = this.state
+        //const { login, avatar_url, html_url } = this.state;
+        const { login, avatar_url, html_url } = this.props.user
         return (
             <div className="card text-center">
                 {/*<img
