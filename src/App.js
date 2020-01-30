@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import './App.css'
+import Navbar from './components/layout/Navbar'
 
 class App extends Component {
     render() {
-        const name = 'John Doe'
+        /*const name = 'John Doe'
         const loading = false
-        const showName = true
+        const showName = true*/
 
         return (
-            /*Expressions & conditionals*/
+            /*Expressions & conditionals
             <div className="App">
                 <h1>Hello {name.toUpperCase()}</h1>
                 {loading ? (
@@ -16,6 +17,11 @@ class App extends Component {
                 ) : (
                     <h3>Hello Hey there {showName && name}</h3>
                 )}
+            </div>*/
+
+            <div className="App">
+                <Navbar />
+                <Navbar title="Test Prop override" />
             </div>
         )
     }
