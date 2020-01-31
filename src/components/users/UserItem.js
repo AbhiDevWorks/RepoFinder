@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const UserItem = ({ user: { login, avatar_url, html_url } }) => {
-    //With fn cmps, this keyword is not used. Instead props are passed in the parameter of the fn cmp
+    //With fn cmps, this is not used. Instead props are passed in the parameter of the fn cmp
     //const { login, avatar_url, html_url } = props.user;
 
     return (
@@ -15,9 +16,12 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
             />
             <h3>{login}</h3>
             <div>
-                <a href={html_url} className="btn btn-dark btn-sm my-1">
+                <Link
+                    to={`/user/${login}`}
+                    className="btn btn-dark btn-sm my-1"
+                >
                     More
-                </a>
+                </Link>
             </div>
         </div>
     )
